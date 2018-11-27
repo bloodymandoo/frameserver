@@ -14,10 +14,11 @@ const sendHandle = () => {
   // 处理请求失败方法
   const renderError = ctx => {
       return (code, msg = '请求失败') => {
+          console.log(code,msg)
           ctx.set('Content-Type', 'application/json')
           ctx.body = {
-              code,
-              data: null,
+              code:'000002',
+              data: 'oo',
               msg
           }
       }
